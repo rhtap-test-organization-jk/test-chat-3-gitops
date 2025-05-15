@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: test-chat-3
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-tssc-quay.apps.cluster-vxvp4.vxvp4.sandbox1987.opentlc.com/rhtap/rhtap-qe:9a8b378d225725661507f27d9e523f97b7461bc6@sha256:99a7e3252600834d6f94e7f512ba34213b80e6586d5ce4b3e41814c81c000462
+          name: container-image
